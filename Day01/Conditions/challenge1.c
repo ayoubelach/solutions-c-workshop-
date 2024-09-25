@@ -1,37 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
 
-char caractere;
+int main() {
+    int nombre;
 
-int main(){
+    printf("Veuillez entrer un nombre entier : ");
+    scanf("%d", &nombre);
 
-        printf( "entrez un caractere : ");
-        scanf(" %c",&caractere);
+    if (nombre % 2 == 0) {
+        printf("%d est un nombre pair.\n", nombre);
+    }
 
-switch(caractere){
+    else {
+        printf("%d est un nombre impair.\n", nombre);
+    }
 
-       case 'a' :
-       case 'e' :
-       case 'u' :
-       case 'o' :
-       case 'i' :
-       case 'A' :
-       case 'E' :
-       case 'O' :
-       case 'I' :
-       case 'U' :
-
-                  printf("voyelle");
-       break;
-
-       default :
-
-           printf("non voyelle");
-
-
-        }
-
-
-
-
-return 0;
+    return 0;
 }
