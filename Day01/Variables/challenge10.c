@@ -9,7 +9,7 @@ int main(){
         scanf("%lf",&rayon);
 
 
-volume = 4/3 * M_PI * pow(rayon,3);
+volume = 4.0/3.0 * M_PI * pow(rayon,3);
 
 printf("volume de sphere est : %.2lf",volume);
 
