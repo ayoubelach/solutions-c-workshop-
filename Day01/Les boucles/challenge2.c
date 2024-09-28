@@ -14,7 +14,9 @@ for(i=1;i<=nombre;i++){
 
 
 }
+
     printf("factorielle de %d est : %d ",nombre,factorielle);
+
 }
 else{
 printf("invalid choix") ;

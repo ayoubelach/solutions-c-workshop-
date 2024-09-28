@@ -32,6 +32,7 @@ printf("invalid choix") ;
 }
 
 j=0;
+
 }while(nombre!=-1);
 return 0;
 }
