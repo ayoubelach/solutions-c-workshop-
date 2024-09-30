@@ -15,13 +15,13 @@ void ajouter() {
     }
 
     printf("entrer le titre du livre : ");
-    scanf(" %[^\n]s", titre[count]);
+    scanf(" %[^\n]s", &titre[count]);
     printf("entrer le nom de l'auteur : ");
-    scanf(" %[^\n]s", auteur[count]);
+    scanf(" %[^\n]s", &auteur[count]);
     printf("entrer le prix du livre : ");
-    scanf("%f", &prix[count]);
+    scanf(" %f", &prix[count]);
     printf("entrer la quantite : ");
-    scanf("%d", &quan[count]);
+    scanf(" %d", &quan[count]);
     count++;
     printf("livre ajoute avec succes...\n");
 }
@@ -41,10 +41,10 @@ void afficher() {
 void mettre() {
     char titrederech[50];
     printf("entrer le titre du livre a mettre a jour: ");
-    scanf(" %[^\n]", titrederech);
+    scanf(" %[^\n]s", titrederech);
 
     for(int i=0;i<count;i++) {
-        if(strcmp(titre[i],titrederech)==0) {
+        if(strcasecmp(titre[i],titrederech)==0) {
             printf("la nouvelle quantite : ");
             scanf("%d",&quan[i]);
             printf("la quantite mise a jour...\n");
