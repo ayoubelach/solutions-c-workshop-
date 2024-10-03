@@ -121,7 +121,7 @@ void tri(){
 int main(){
 
 
-int choix;
+char choix;
 
 do{
 
@@ -135,23 +135,23 @@ do{
     printf("entrez 7 pour quitter le programme :\n");
     printf("************************************************\n");
     printf("faites un choix : ");
-    scanf("%d",&choix);
+    scanf("%[^\n]s",&choix);
 
     switch(choix){
 
-    case 1 : ajouter(); break;
+    case '1' : ajouter(); break;
 
-    case 2 : modifier(); break;
+    case '2' : modifier(); break;
 
-    case 3 : supprimer(); break;
+    case '3' : supprimer(); break;
 
-    case 4 : afficher(); break;
+    case '4' : afficher(); break;
 
-    case 5 : rechercher(); break;
+    case '5' : rechercher(); break;
 
-    case 6 : tri(); break;
+    case '6' : tri(); break;
 
-    case 7 : printf("le programme est quitte"); break;
+    case '7' : printf("le programme est quitte"); break;
 
     default : printf("choix invalid!");
 
