@@ -15,7 +15,93 @@ char date[11]; //exemple 27/07/2000
 struct reservation r[max];
 int count=0, countref=1;
 
-void ajouterpard();
+void ajouterpard(){
+
+strcpy(r[0].nom,"ayoub");
+strcpy(r[0].prenom,"elachkaoui");
+strcpy(r[0].ndtel,"0623420804");
+r[0].age=24;
+strcpy(r[0].status,"valide");
+r[0].ref=countref++;
+strcpy(r[0].date,"03/10/2023");
+
+strcpy(r[1].nom,"brahim");
+strcpy(r[1].prenom,"ben");
+strcpy(r[1].ndtel,"0623420805");
+r[1].age=64;
+strcpy(r[1].status,"traite");
+r[1].ref=countref++;
+strcpy(r[1].date,"02/10/2023");
+
+strcpy(r[2].nom,"calafiori");
+strcpy(r[2].prenom,"max");
+strcpy(r[2].ndtel,"0623410504");
+r[2].age=34;
+strcpy(r[2].status,"annule");
+r[2].ref=countref++;
+strcpy(r[2].date,"01/10/2023");
+
+strcpy(r[3].nom,"zahri");
+strcpy(r[3].prenom,"bohmed");
+strcpy(r[3].ndtel,"0623420814");
+r[3].age=40;
+strcpy(r[3].status,"valide");
+r[3].ref=countref++;
+strcpy(r[3].date,"02/10/2023");
+
+strcpy(r[4].nom,"dahmad");
+strcpy(r[4].prenom,"morchidi");
+strcpy(r[4].ndtel,"0623427854");
+r[4].age=5;
+strcpy(r[4].status,"reporte");
+r[4].ref=countref++;
+strcpy(r[4].date,"02/10/2012");
+
+strcpy(r[5].nom,"sofiane");
+strcpy(r[5].prenom,"alaoui");
+strcpy(r[5].ndtel,"0623427814");
+r[5].age=5;
+strcpy(r[5].status,"traite");
+r[5].ref=countref++;
+strcpy(r[5].date,"02/10/2022");
+
+strcpy(r[6].nom,"naima");
+strcpy(r[6].prenom,"motawadi");
+strcpy(r[6].ndtel,"0623427814");
+r[6].age=54;
+strcpy(r[6].status,"traite");
+r[6].ref=countref++;
+strcpy(r[6].date,"02/10/2022");
+
+strcpy(r[7].nom,"halima");
+strcpy(r[7].prenom,"ben");
+strcpy(r[7].ndtel,"0623447814");
+r[7].age=4;
+strcpy(r[7].status,"traite");
+r[7].ref=countref++;
+strcpy(r[7].date,"02/10/2022");
+
+strcpy(r[8].nom,"walid");
+strcpy(r[8].prenom,"malki");
+strcpy(r[8].ndtel,"0653427814");
+r[8].age=54;
+strcpy(r[8].status,"reporte");
+r[8].ref=countref++;
+strcpy(r[8].date,"02/10/2022");
+
+strcpy(r[9].nom,"oualid");
+strcpy(r[9].prenom,"elhoiary");
+strcpy(r[9].ndtel,"0653427814");
+r[9].age=36;
+strcpy(r[9].status,"traite");
+r[9].ref=countref++;
+strcpy(r[9].date,"02/05/2022");
+count=10;
+
+
+
+}
+
 void ajouter(){
 if(count>=max){
 printf("maximum de reservations");
@@ -125,7 +211,7 @@ void rechercher(){
                printf("nom et prenom: %s %s \n",r[i].nom,r[i].prenom);
                printf("numero de telrphone: %s \n",r[i].ndtel);
                printf("age: %d \n",r[i].age);
-               printf("status: %s  \n",r[i].status);
+               printf("statut: %s  \n",r[i].status);
                printf("date de reservation: %s \n",r[i].date);
         return;
 
@@ -163,6 +249,7 @@ void tri(){
         printf("Nom et prenom: %s %s\n", r[i].nom,r[i].prenom);
         printf("Numero de telefone: %s\n", r[i].ndtel);
         printf("age: %d\n", r[i].age);
+        printf("statut: %s\n", r[i].status);
         printf("date de reservation: %s\n", r[i].date);
     }
 
@@ -189,6 +276,7 @@ else if(c==2){
         printf("Nom et prenom: %s %s\n", r[i].nom,r[i].prenom);
         printf("Numero de telefone: %s\n", r[i].ndtel);
         printf("age: %d\n", r[i].age);
+        printf("statut: %s\n", r[i].status);
         printf("date de reservation: %s\n", r[i].date);
     }
 
@@ -197,9 +285,9 @@ else if(c==2){
 }
 else
     {
-    printf("les reservations sont valide: \n");
+    printf("***********les reservations sont valide:*********** \n");
     for(int i=0;i<count;i++){
-    if(strcasecmp(r[i].status,"valide"==0)){
+    if(strcasecmp(r[i].status,"valide")==0){
         printf("reference %d:\n", r[i].ref);
         printf("Nom et prenom: %s %s\n", r[i].nom,r[i].prenom);
         printf("Numero de telefone: %s\n", r[i].ndtel);
@@ -207,9 +295,9 @@ else
         printf("date de reservation: %s\n", r[i].date);
 
     }}
-    printf("les reservations sont reporte: \n");
+    printf("***********les reservations sont reporte:*********** \n");
     for(int i=0;i<count;i++){
-    if(strcasecmp(r[i].status,"reporte"==0)){
+    if(strcasecmp(r[i].status,"reporte")==0){
         printf("reference %d:\n", r[i].ref);
         printf("Nom et prenom: %s %s\n", r[i].nom,r[i].prenom);
         printf("Numero de telefone: %s\n", r[i].ndtel);
@@ -217,9 +305,9 @@ else
         printf("date de reservation: %s\n", r[i].date);
 
     }}
-    printf("les reservations annule sont: \n");
+    printf("************les reservations annule sont:*********** \n");
     for(int i=0;i<count;i++){
-    if(strcasecmp(r[i].status,"annule"==0)){
+    if(strcasecmp(r[i].status,"annule")==0){
         printf("reference %d:\n", r[i].ref);
         printf("Nom et prenom: %s %s\n", r[i].nom,r[i].prenom);
         printf("Numero de telefone: %s\n", r[i].ndtel);
@@ -227,9 +315,9 @@ else
         printf("date de reservation: %s\n", r[i].date);
 
     }}
-    printf("les reservations traite sont: \n");
+    printf("************les reservations traite sont:*********** \n");
     for(int i=0;i<count;i++){
-    if(strcasecmp(r[i].status,"traite"==0)){
+    if(strcasecmp(r[i].status,"traite")==0){
         printf("reference %d:\n", r[i].ref);
         printf("Nom et prenom: %s %s\n", r[i].nom,r[i].prenom);
         printf("Numero de telefone: %s\n", r[i].ndtel);
@@ -240,14 +328,44 @@ else
 
      }
 
-
-
-
-
-
-
-
 }
+void statis() {
+    int sage=0;
+    int agea=0,ageb=0,agec=0;
+    int valide=0,reporte=0,annule=0,traite=0;
+
+    for (int i=0;i<count;i++) {
+        sage+=r[i].age;
+
+        if (r[i].age<=18)
+            agea++;
+        else if (r[i].age<=35)
+            ageb++;
+        else
+            agec++;
+
+        if (strcmp(r[i].status,"valide")==0)
+            valide++;
+        else if (strcmp(r[i].status,"reporte")==0)
+            reporte++;
+        else if (strcmp(r[i].status,"annule")==0)
+            annule++;
+        else if (strcmp(r[i].status,"traite")==0)
+            traite++;
+        else
+            printf("statut incorrect\n");
+    }
+
+    if (count > 0) {
+        printf("moyenne d'age des patients: %.2f ans\n",(float)sage/count);
+    } else {
+        printf("Aucun patient pour calculer.\n");
+    }
+
+    printf("nombre de patients par tranche d'age : 0-18 ans : %d, 19-35 ans : %d, 36+ ans : %d\n",agea,ageb,agec);
+    printf("statistiques des statuts : valide : %d, reporte : %d, annule : %d, traite : %d\n",valide,reporte,annule,traite);
+}
+
 int main()
 {
 int choix;
@@ -283,7 +401,7 @@ do{
 
     case 6 : tri(); break;
 
-
+    case 7 : statis(); break;
 
     case 8 : printf("le programme est quitte"); break;
 
@@ -299,89 +417,4 @@ do{
 
 }
 
-ajouterpard(){
 
-strcpy(r[0].nom,"ayoub");
-strcpy(r[0].prenom,"elachkaoui");
-strcpy(r[0].ndtel,"0623420804");
-r[0].age=24;
-strcpy(r[0].status,"valide");
-r[0].ref=countref++;
-strcpy(r[0].date,"03/10/2023");
-
-strcpy(r[1].nom,"brahim");
-strcpy(r[1].prenom,"ben");
-strcpy(r[1].ndtel,"0623420805");
-r[1].age=64;
-strcpy(r[1].status,"traite");
-r[1].ref=countref++;
-strcpy(r[1].date,"02/10/2023");
-
-strcpy(r[2].nom,"calafiori");
-strcpy(r[2].prenom,"max");
-strcpy(r[2].ndtel,"0623410504");
-r[2].age=34;
-strcpy(r[2].status,"annule");
-r[2].ref=countref++;
-strcpy(r[2].date,"01/10/2023");
-
-strcpy(r[3].nom,"zahri");
-strcpy(r[3].prenom,"bohmed");
-strcpy(r[3].ndtel,"0623420814");
-r[3].age=40;
-strcpy(r[3].status,"valide");
-r[3].ref=countref++;
-strcpy(r[3].date,"02/10/2023");
-
-strcpy(r[4].nom,"dahmad");
-strcpy(r[4].prenom,"morchidi");
-strcpy(r[4].ndtel,"0623427854");
-r[4].age=5;
-strcpy(r[4].status,"reporte");
-r[4].ref=countref++;
-strcpy(r[4].date,"02/10/2012");
-
-strcpy(r[5].nom,"sofiane");
-strcpy(r[5].prenom,"alaoui");
-strcpy(r[5].ndtel,"0623427814");
-r[5].age=5;
-strcpy(r[5].status,"traite");
-r[5].ref=countref++;
-strcpy(r[5].date,"02/10/2022");
-
-strcpy(r[6].nom,"naima");
-strcpy(r[6].prenom,"motawadi");
-strcpy(r[6].ndtel,"0623427814");
-r[6].age=54;
-strcpy(r[6].status,"traite");
-r[6].ref=countref++;
-strcpy(r[6].date,"02/10/2022");
-
-strcpy(r[7].nom,"halima");
-strcpy(r[7].prenom,"ben");
-strcpy(r[7].ndtel,"0623447814");
-r[7].age=4;
-strcpy(r[7].status,"traite");
-r[7].ref=countref++;
-strcpy(r[7].date,"02/10/2022");
-
-strcpy(r[8].nom,"walid");
-strcpy(r[8].prenom,"malki");
-strcpy(r[8].ndtel,"0653427814");
-r[8].age=54;
-strcpy(r[8].status,"reporte");
-r[8].ref=countref++;
-strcpy(r[8].date,"02/10/2022");
-
-strcpy(r[9].nom,"oualid");
-strcpy(r[9].prenom,"elhoiary");
-strcpy(r[9].ndtel,"0653427814");
-r[9].age=36;
-strcpy(r[9].status,"traite");
-r[9].ref=countref++;
-strcpy(r[9].date,"02/05/2022");
-count=10;
-
-
-
-}
